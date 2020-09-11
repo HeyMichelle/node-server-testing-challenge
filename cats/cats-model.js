@@ -2,7 +2,7 @@
 const db = require('../data/dbConfig.js')
 
 
-function getFirstTenCats() {
+function getCats() {
   return db('cats').where({ id }).limit(10) // not sure?
 }
 
@@ -20,8 +20,8 @@ function removeCatById(id) {
 }
 
 module.exports = {
-  addNewCat,
-  getFirstTenCats,
+  getCats,
   getCatById,
+  addNewCat,
   removeCatById
 }
